@@ -6,12 +6,12 @@ import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("select color_or_style from catalog_for_website")
+my_cur.execute("SELECT * FROM CATALOG_FOR_WEBSITE")
 my_catalog = my_cur.fetchall() 
 
 
-df = pd.DataFrame(my_catalog)
-streamlit.write(df)
+#df = pd.DataFrame(my_catalog)
+#streamlit.write(df)
 
 
 
