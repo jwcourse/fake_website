@@ -5,6 +5,9 @@ import streamlit
 # urllib.error import URLError
 
 streamlit.title('Clothes Catalog Prototype')
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+
+
 
 #streamlit.header('Breakfast Menu')
 
