@@ -10,8 +10,8 @@ my_cur.execute("SHOW TABLES")
 my_catalog = my_cur.fetchall() 
 
 
-#df = pd.DataFrame(my_catalog)
-#streamlit.write(df)
+df = pd.DataFrame(my_catalog)
+streamlit.write(df)
 
 
 
