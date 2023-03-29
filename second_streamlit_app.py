@@ -6,7 +6,7 @@ import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * FROM ZENAS_ATHLEISURE_DB.PRODUCTS.SWEATSUIT_SIZES")
+my_cur.execute("select color_or_style FROM ZENAS_ATHLEISURE_DB.PRODUCTS.SWEATSUIT_SIZES")
 my_catalog = my_cur.fetchall() 
 
 
