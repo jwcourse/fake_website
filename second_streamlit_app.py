@@ -11,7 +11,9 @@ my_catalog = my_cur.fetchall()
 
 
 df = pd.DataFrame(my_catalog)
-streamlit.write(df)
+#streamlit.write(df)
 
+color_list = df[0].values.tolist()
 
-
+option = streamlit.selectbox('Pick a sweatsuit color or style:', list(color_list))
+product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
