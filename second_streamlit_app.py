@@ -19,9 +19,8 @@ option = streamlit.selectbox('Pick a sweatsuit color or style:', list(color_list
 product_caption = 'Our warm, comfortable, ' + option + ' sweatsuit!'
 
 
+my_cur.execute("select direct_url, price, size_list, upsell_product_desc from catalog_for_website where color_or_style = '" + option + "';")
 
-query = "SELECT direct_url, price, size_list, upsell_product_desc FROM catalog_for_website WHERE color_or_style = %s;"
-my_cur.execute(query, (option,))
 df2 = my_cur.fetchone()
 
 streamlit.write(df2)
